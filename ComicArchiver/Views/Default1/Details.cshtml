@@ -1,0 +1,30 @@
+﻿@model ComicArchiver.Models.ComicSeries
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ComicSeries</legend>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">IssuesOwned</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IssuesOwned)
+    </div>
+
+    <div class="display-label">CurrentIssue</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CurrentIssue)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
